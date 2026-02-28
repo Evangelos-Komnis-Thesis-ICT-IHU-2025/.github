@@ -1,4 +1,4 @@
-# Thesis Organization – SCORM Engine Project
+# Οργάνωση Αποθετηρίων Διπλωματικής Εργασίας – SCORM Engine
 
 ## Γενικές Πληροφορίες
 
