@@ -4,6 +4,10 @@
 
 Το παρόν GitHub Organization περιλαμβάνει το τελικό παραδοτέο της Διπλωματικής Εργασίας του Ευάγγελου Κομνή (Evangelos Komnis), ΑΕΜ ict20009.
 
+**Επιβλέπων Καθηγητής:** Μπασαγιάννης Στυλιανός  
+**Πανεπιστήμιο:** Διεθνές Πανεπιστήμιο της Ελλάδος (International Hellenic University)  
+**Τμήμα:** Τμήμα Μηχανικών Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών (Department of Computer, Informatics & Telecommunications Engineering)
+
 ### Τίτλος Διπλωματικής Εργασίας
 Σχεδίαση και υλοποίηση διαδικτυακής μηχανής διαχείρισης περιεχομένου με έμφαση σε ασφάλεια και διαλειτουργικότητα (ΠΑΝ)
 
@@ -56,6 +60,10 @@
 ## General Information
 
 This GitHub Organization contains the final deliverable of the Diploma Thesis of Evangelos Komnis, Student ID: ict20009.
+
+**Supervisor:** Stylianos Basagiannis  
+**University:** International Hellenic University  
+**Department:** Department of Computer, Informatics & Telecommunications Engineering
 
 ### Thesis Title
 Design and Implementation of a Web-Based Content Management Engine with Emphasis on Security and Interoperability (PAN)
