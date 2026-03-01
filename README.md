@@ -57,15 +57,6 @@
 - `player` -> επικοινωνεί runtime με `scorm-engine`.
 - `central-docker-infrastructure` -> ορχηστρώνει `scorm-engine`, `player`, `example-lms-client` και data/observability services.
 
-## Τοπικοί Φάκελοι Υποστήριξης (μη ξεχωριστά repos οργάνωσης)
-
-Στο root υπάρχουν και φάκελοι υποστήριξης που χρησιμοποιούνται στο workflow του project, αλλά δεν αντιστοιχούν σε ξεχωριστά git repos του organization:
-
-- `thesis-agent-audit-pack`
-- `scorm-engine-specs-v3`
-- `scorm-engine-specs-v4`
-- `Offline Bibliography`
-
 ## Σκοπός
 
 Το organization συγκεντρώνει το σύνολο του ερευνητικού, σχεδιαστικού και υλοποιητικού έργου της διπλωματικής, με στόχο:
@@ -134,15 +125,6 @@ Active organization repositories in the root workspace are:
 - `scorm-engine-php-sdk` targets `scorm-engine` API endpoints.
 - `player` exchanges runtime data with `scorm-engine`.
 - `central-docker-infrastructure` orchestrates engine, player, LMS, and supporting data/observability services.
-
-## Local Supporting Folders (not separate organization repos)
-
-The root workspace also includes supporting folders used in the project workflow that are not separate organization git repositories:
-
-- `thesis-agent-audit-pack`
-- `scorm-engine-specs-v3`
-- `scorm-engine-specs-v4`
-- `Offline Bibliography`
 
 ## Purpose
 
