@@ -2,52 +2,77 @@
 
 ## Γενικές Πληροφορίες
 
-Το παρόν GitHub Organization περιλαμβάνει το τελικό παραδοτέο της Διπλωματικής Εργασίας του Ευάγγελου Κομνή (Evangelos Komnis), ΑΕΜ ict20009.
+Το παρόν GitHub Organization περιλαμβάνει το τελικό παραδοτέο της Διπλωματικής Εργασίας του Ευάγγελου Κομνή (Evangelos Komnis), ΑΕΜ `ict20009`.
+
+**Επιβλέπων Καθηγητής:** Μπασαγιάννης Στυλιανός  
+**Πανεπιστήμιο:** Διεθνές Πανεπιστήμιο της Ελλάδος (International Hellenic University)  
+**Τμήμα:** Τμήμα Μηχανικών Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών (Department of Computer, Informatics & Telecommunications Engineering)
 
 ### Τίτλος Διπλωματικής Εργασίας
 Σχεδίαση και υλοποίηση διαδικτυακής μηχανής διαχείρισης περιεχομένου με έμφαση σε ασφάλεια και διαλειτουργικότητα (ΠΑΝ)
 
 ## Περίληψη
 
-Η παρούσα διπλωματική εργασία ασχολείται με τον σχεδιασμό και την ανάπτυξη μιας ασφαλούς και αποδοτικής μηχανής SCORM (SCORM Engine), η οποία υποστηρίζει τα πλέον διαδεδομένα πρότυπα SCORM και ενσωματώνει μηχανισμούς αποθήκευσης και συγχρονισμού της προόδου των χρηστών.
+Η διπλωματική εργασία εστιάζει στον σχεδιασμό και την υλοποίηση μιας ασφαλούς και επεκτάσιμης μηχανής SCORM, με στόχο τη διαλειτουργική ενσωμάτωση με LMS, την αξιόπιστη αποθήκευση/συγχρονισμό προόδου και την υποστήριξη των SCORM 1.2 και SCORM 2004.
 
-Το σύστημα έχει σχεδιαστεί ώστε να επικοινωνεί με Συστήματα Διαχείρισης Μάθησης (Learning Management Systems – LMS) για τη μετάδοση και διαχείριση δεδομένων προόδου. Ιδιαίτερη έμφαση δίνεται στην ασφάλεια, τη διαλειτουργικότητα, την επεκτασιμότητα και την αποδοτική διαχείριση εκπαιδευτικών δεδομένων.
+## Δομή Οργάνωσης Αποθετηρίων (τρέχουσα)
 
-## Δομή Οργάνωσης Αποθετηρίων
+Τα ενεργά αποθετήρια του organization (με βάση το root workspace) είναι:
 
-Τα αποθετήρια της οργάνωσης ομαδοποιούνται με βάση το λειτουργικό και επιστημονικό τους πλαίσιο ως εξής:
+1. `scorm-engine`  
+   Backend REST engine (Spring Boot) για import μαθημάτων, launches, runtime commits, progress persistence και reporting.
+2. `player`  
+   Runtime player (Node.js/TypeScript) για launch rendering, SCO serving και runtime bridge προς engine.
+3. `scorm-engine-php-sdk`  
+   Framework-agnostic PHP SDK (PSR-18) για κατανάλωση του `scorm-engine` API.
+4. `example-lms-client`  
+   Laravel reference LMS client που ενσωματώνει το PHP SDK και υλοποιεί admin/learner flows.
+5. `central-docker-infrastructure`  
+   Ενοποιημένη containerized υποδομή (Compose) για engine, player, LMS και supporting services (Postgres, Redis, MinIO, ELK).
+6. `github-actions-template`  
+   Πρότυπα/συμβάσεις GitHub Actions workflows για ομοιομορφία CI/CD.
+7. `thesis-document-latex`  
+   Κείμενο διπλωματικής σε LaTeX (συγγραφή/τεκμηρίωση).
 
 ### Α. Πυρήνας Συστήματος (Core System Components)
 
-#### Α.1 Backend Application – SCORM Engine  
-Το κύριο αποθετήριο του συστήματος, το οποίο περιλαμβάνει την υλοποίηση του backend της μηχανής SCORM. Αποτελεί τον βασικό πυρήνα του συστήματος και διαχειρίζεται την επεξεργασία SCORM πακέτων, την αποθήκευση και τον συγχρονισμό προόδου, καθώς και την επικοινωνία με εξωτερικά LMS μέσω κατάλληλων διεπαφών προγραμματισμού (APIs).
+- `scorm-engine`
+- `player`
+- `scorm-engine-php-sdk`
+- `example-lms-client`
 
-#### Α.2 Player / Client Εφαρμογή  
-Αποθετήριο που περιλαμβάνει την υλοποίηση της εφαρμογής πελάτη (frontend), υπεύθυνης για την απόδοση των SCORM πακέτων και την αλληλεπίδραση με το backend σύστημα.
+### Β. Υποδομή και Αυτοματοποίηση (Infrastructure & Automation)
 
----
-
-### Β. Υποδομή Ανάπτυξης και Ανάπτυξης Λογισμικού (Infrastructure & Deployment)
-
-#### Β.1 Docker Infrastructure  
-Αποθετήριο το οποίο ενοποιεί τα επιμέρους Docker components των επιμέρους αποθετηρίων και επιτρέπει τη συγκρότηση και ανάπτυξη της πλήρους στοίβας της εφαρμογής σε περιβάλλον containerized deployment.
-
----
+- `central-docker-infrastructure`
+- `github-actions-template`
 
 ### Γ. Τεκμηρίωση και Ακαδημαϊκό Υλικό (Documentation & Academic Material)
 
-#### Γ.1 Συγγραφή Διπλωματικής (LaTeX – MudLaTeX)  
-Αποθετήριο για την ανάπτυξη, επιμέλεια και συντήρηση του κειμένου της διπλωματικής εργασίας σε περιβάλλον LaTeX, σύμφωνα με το πρότυπο MudLaTeX.
+- `thesis-document-latex`
 
-#### Γ.2 Παραρτήματα Διπλωματικής  
-Αποθετήριο που περιλαμβάνει τα παραρτήματα της εργασίας, συμπληρωματικό υλικό, τεχνικά διαγράμματα και υποστηρικτική τεκμηρίωση.
+## Σχέσεις Μεταξύ Repos
 
-#### Γ.3 Βιβλιογραφία ()  
-Αποθετήριο που περιλαμβάνει τη βιβλιογραφία της εργασίας σε ψηφιακή μορφή (PDF, επιστημονικά άρθρα και λοιπές πηγές), οργανωμένη σε περιβάλλον Docker για λόγους αναπαραγωγιμότητας και αρχειοθέτησης.
+- `example-lms-client` -> χρησιμοποιεί `scorm-engine-php-sdk`.
+- `scorm-engine-php-sdk` -> καταναλώνει API του `scorm-engine`.
+- `player` -> επικοινωνεί runtime με `scorm-engine`.
+- `central-docker-infrastructure` -> ορχηστρώνει `scorm-engine`, `player`, `example-lms-client` και data/observability services.
+
+## Τοπικοί Φάκελοι Υποστήριξης (μη ξεχωριστά repos οργάνωσης)
+
+Στο root υπάρχουν και φάκελοι υποστήριξης που χρησιμοποιούνται στο workflow του project, αλλά δεν αντιστοιχούν σε ξεχωριστά git repos του organization:
+
+- `thesis-agent-audit-pack`
+- `scorm-engine-specs-v3`
+- `scorm-engine-specs-v4`
+- `Offline Bibliography`
 
 ## Σκοπός
 
-Το παρόν organization συγκεντρώνει το σύνολο του ερευνητικού, σχεδιαστικού και υλοποιητικού έργου της διπλωματικής εργασίας, διασφαλίζοντας τη διαφάνεια, την αναπαραγωγιμότητα και τη συστηματική τεκμηρίωση του αναπτυγμένου συστήματος.
+Το organization συγκεντρώνει το σύνολο του ερευνητικού, σχεδιαστικού και υλοποιητικού έργου της διπλωματικής, με στόχο:
+
+- διαφάνεια στην αρχιτεκτονική και την εξέλιξη,
+- αναπαραγωγιμότητα μέσω CI/CD και containerized υποδομής,
+- συστηματική τεκμηρίωση και ακαδημαϊκή πληρότητα.
 
 ---
 
@@ -55,49 +80,74 @@
 
 ## General Information
 
-This GitHub Organization contains the final deliverable of the Diploma Thesis of Evangelos Komnis, Student ID: ict20009.
+This GitHub Organization contains the final deliverable of the Diploma Thesis of Evangelos Komnis, Student ID `ict20009`.
+
+**Supervisor:** Stylianos Basagiannis  
+**University:** International Hellenic University  
+**Department:** Department of Computer, Informatics & Telecommunications Engineering
 
 ### Thesis Title
 Design and Implementation of a Web-Based Content Management Engine with Emphasis on Security and Interoperability (PAN)
 
 ## Abstract
 
-This diploma thesis focuses on the design and development of a secure and efficient SCORM Engine that supports the most widely adopted SCORM standards and integrates mechanisms for storing and synchronizing user progress.
+This thesis focuses on the design and implementation of a secure and extensible SCORM Engine platform, targeting interoperable LMS integration, resilient learner-progress synchronization, and support for SCORM 1.2 and SCORM 2004.
 
-The system is designed to communicate with Learning Management Systems (LMS) for the transmission and management of learner progress data. Particular emphasis is placed on security, interoperability, scalability, and efficient management of educational data.
+## Repository Structure (current)
 
-## Repository Structure
+Active organization repositories in the root workspace are:
 
-The repositories within this organization are grouped according to their functional and academic context as follows:
+1. `scorm-engine`  
+   Spring Boot backend engine for course import, launches, runtime commits, persistence, and reporting.
+2. `player`  
+   Node.js/TypeScript runtime player for launch rendering, SCO delivery, and runtime API bridging.
+3. `scorm-engine-php-sdk`  
+   Framework-agnostic PHP SDK (PSR-18) for consuming `scorm-engine` APIs.
+4. `example-lms-client`  
+   Laravel reference LMS client integrating the PHP SDK for admin and learner flows.
+5. `central-docker-infrastructure`  
+   Unified Docker Compose stack for the full platform and supporting services.
+6. `github-actions-template`  
+   Reusable CI/CD workflow conventions and templates.
+7. `thesis-document-latex`  
+   Thesis writing and maintenance repository (LaTeX).
 
 ### A. Core System Components
 
-#### A.1 Backend Application – SCORM Engine  
-The primary repository of the system, containing the backend implementation of the SCORM Engine. It constitutes the core component of the project and is responsible for SCORM package processing, progress storage and synchronization, as well as communication with external LMS platforms via appropriate APIs.
+- `scorm-engine`
+- `player`
+- `scorm-engine-php-sdk`
+- `example-lms-client`
 
-#### A.2 Player / Client Application  
-Repository containing the frontend implementation responsible for rendering SCORM packages and interacting with the backend system.
+### B. Infrastructure & Automation
 
----
-
-### B. Infrastructure & Deployment
-
-#### B.1 Docker Infrastructure  
-Repository that integrates the individual Docker components of the respective repositories and enables the build and deployment of the complete application stack in a containerized environment.
-
----
+- `central-docker-infrastructure`
+- `github-actions-template`
 
 ### C. Documentation & Academic Material
 
-#### C.1 Thesis Writing (LaTeX – MudLaTeX)  
-Repository dedicated to the development, editing, and maintenance of the thesis text using LaTeX, following the MudLaTeX template format.
+- `thesis-document-latex`
 
-#### C.2 Thesis Appendices  
-Repository containing the appendices of the thesis, supplementary material, technical diagrams, and supporting documentation.
+## Inter-Repository Relationships
 
-#### C.3 Bibliography (Dockerized Archive)  
-Repository containing the thesis bibliography in digital form (PDF files, academic papers, and related sources), organized within a Docker environment to ensure reproducibility and archival consistency.
+- `example-lms-client` depends on `scorm-engine-php-sdk`.
+- `scorm-engine-php-sdk` targets `scorm-engine` API endpoints.
+- `player` exchanges runtime data with `scorm-engine`.
+- `central-docker-infrastructure` orchestrates engine, player, LMS, and supporting data/observability services.
+
+## Local Supporting Folders (not separate organization repos)
+
+The root workspace also includes supporting folders used in the project workflow that are not separate organization git repositories:
+
+- `thesis-agent-audit-pack`
+- `scorm-engine-specs-v3`
+- `scorm-engine-specs-v4`
+- `Offline Bibliography`
 
 ## Purpose
 
-This organization consolidates the entirety of the research, design, and implementation work conducted in the context of the diploma thesis, ensuring transparency, reproducibility, and systematic documentation of the developed system.
+This organization consolidates the complete research, design, and implementation output of the thesis to ensure:
+
+- architectural transparency,
+- reproducibility through CI/CD and containerized deployment,
+- systematic technical and academic documentation.
