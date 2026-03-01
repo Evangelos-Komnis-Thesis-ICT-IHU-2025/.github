@@ -15,9 +15,7 @@
 
 Η διπλωματική εργασία εστιάζει στον σχεδιασμό και την υλοποίηση μιας ασφαλούς και επεκτάσιμης μηχανής SCORM, με στόχο τη διαλειτουργική ενσωμάτωση με LMS, την αξιόπιστη αποθήκευση/συγχρονισμό προόδου και την υποστήριξη των SCORM 1.2 και SCORM 2004.
 
-## Δομή Οργάνωσης Αποθετηρίων (τρέχουσα)
-
-Τα ενεργά αποθετήρια του organization (με βάση το root workspace) είναι:
+## Δομή Οργάνωσης Αποθετηρίων
 
 1. `scorm-engine`  
    Backend REST engine (Spring Boot) για import μαθημάτων, launches, runtime commits, progress persistence και reporting.
@@ -84,9 +82,7 @@ Design and Implementation of a Web-Based Content Management Engine with Emphasis
 
 This thesis focuses on the design and implementation of a secure and extensible SCORM Engine platform, targeting interoperable LMS integration, resilient learner-progress synchronization, and support for SCORM 1.2 and SCORM 2004.
 
-## Repository Structure (current)
-
-Active organization repositories in the root workspace are:
+## Repository Structure
 
 1. `scorm-engine`  
    Spring Boot backend engine for course import, launches, runtime commits, persistence, and reporting.
